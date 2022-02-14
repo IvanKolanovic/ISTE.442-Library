@@ -1,0 +1,20 @@
+version: "3"
+services:
+  mariadb:
+    container_name: rit_library
+    image: mariadb:10.6
+    volumes:
+      - ritlibrary:/var/lib/mysql
+    environment:
+      TZ: "Europe/Zagreb"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "rit_library"
+      MYSQL_USER: "rit"
+      MYSQL_PASSWORD: "rit"
+    ports:
+      - 3306:3306
+
+volumes:
+  ritlibrary:
+

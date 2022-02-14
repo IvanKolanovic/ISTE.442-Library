@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>RIT Library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body id="register">
+<div id="register-data" class="container">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">
+            <img id="register-img" src="public/images/register-event.svg" alt="Page of a user">
+        </div>
+        <div class="col-sm-5 col-md-5">
+            <div id="register-title" class="font-title mb-3">Register here!</div>
+            <form id="register-form" action="?page=functions/register" method="POST">
+                <p class="lead">Create a new account, so you can manage your events!</p>
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" placeholder="Enter username here" aria-label="Username"
+                           name="username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter password here"
+                           id="exampleInputPassword1" name="password">
+                </div>
+                <button type="submit" class="btn btn-success btn-color">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
