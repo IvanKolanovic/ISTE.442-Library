@@ -12,4 +12,8 @@ public interface BookRepository extends JpaRepository<Book, Long>, QuerydslPredi
 
     Optional<Book> findByTitle(String title);
 
+    Optional<Book> findByIdAndAvailableTrue(Long id);
+
+    Optional<Book> findByIdAndAvailableFalse(Long id);
+
 }

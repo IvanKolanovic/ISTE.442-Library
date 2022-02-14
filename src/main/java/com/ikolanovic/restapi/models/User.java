@@ -42,4 +42,11 @@ public class User {
 
     @OneToMany(mappedBy = "borrowedBy")
     private List<Book> borrowedBooks;
+
+    @Transient
+    private String fullName;
+
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 }

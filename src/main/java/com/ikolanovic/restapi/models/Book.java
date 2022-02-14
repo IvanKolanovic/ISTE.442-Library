@@ -36,7 +36,7 @@ public class Book {
     private Author author;
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "borrowed_by", referencedColumnName = "id")
     private User borrowedBy;
 
