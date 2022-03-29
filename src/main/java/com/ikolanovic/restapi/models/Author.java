@@ -21,12 +21,8 @@ public class Author {
     private Long id;
 
     @Basic
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
-
-    @Basic
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     @Basic
     @Column

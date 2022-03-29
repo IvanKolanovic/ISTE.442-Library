@@ -362,12 +362,33 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/books",
+							"raw": "{{url}}/books?author=Tolkien",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"books"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "The Lord of the Rings: The Two Towers",
+									"disabled": true
+								},
+								{
+									"key": "author",
+									"value": "Tolkien"
+								},
+								{
+									"key": "genre",
+									"value": "Horror",
+									"disabled": true
+								},
+								{
+									"key": "publishDate",
+									"value": "1954-07-29",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -520,12 +541,22 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/authors",
+							"raw": "{{url}}/authors?dob=1903-06-25&location=U.S",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"authors"
+							],
+							"query": [
+								{
+									"key": "dob",
+									"value": "1903-06-25"
+								},
+								{
+									"key": "location",
+									"value": "U.S"
+								}
 							]
 						}
 					},

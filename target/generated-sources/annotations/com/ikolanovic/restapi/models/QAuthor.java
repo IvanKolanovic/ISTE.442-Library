@@ -28,13 +28,11 @@ public class QAuthor extends EntityPathBase<Author> {
 
     public final DatePath<java.time.LocalDate> dob = createDate("dob", java.time.LocalDate.class);
 
-    public final StringPath firstName = createString("firstName");
-
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
-    public final StringPath lastName = createString("lastName");
-
     public final StringPath location = createString("location");
+
+    public final StringPath name = createString("name");
 
     public QAuthor(String variable) {
         super(Author.class, forVariable(variable));

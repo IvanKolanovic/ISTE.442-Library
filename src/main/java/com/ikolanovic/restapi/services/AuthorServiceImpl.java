@@ -68,11 +68,8 @@ public class AuthorServiceImpl extends BaseService implements AuthorService {
                         .map(
                                 author -> {
 
-                                    if (Optional.ofNullable(input.getFirstName()).isPresent())
-                                        author.setFirstName(input.getFirstName());
-
-                                    if (Optional.ofNullable(input.getLastName()).isPresent())
-                                        author.setLastName(input.getLastName());
+                                    if (Optional.ofNullable(input.getName()).isPresent())
+                                        author.setName(input.getName());
 
                                     if (Optional.ofNullable(input.getLocation()).isPresent())
                                         author.setLocation(input.getLocation());

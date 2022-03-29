@@ -27,10 +27,8 @@ public class CustomQueryBuilder {
         BooleanBuilder booleanBuilder = new BooleanBuilder();
 
         if (Optional.ofNullable(predicate.getAuthor()).isPresent()) {
-            String[] arr = predicate.getAuthor().split("");
 
-            booleanBuilder.and(QBook.book.author.firstName.containsIgnoreCase(arr[0]));
-            booleanBuilder.and(QBook.book.author.firstName.containsIgnoreCase(arr[1]));
+            booleanBuilder.and(QBook.book.author.name.containsIgnoreCase(predicate.getAuthor()));
         }
 
         if (Optional.ofNullable(predicate.getTitle()).isPresent()) {
@@ -56,10 +54,7 @@ public class CustomQueryBuilder {
         BooleanBuilder booleanBuilder = new BooleanBuilder();
 
         if (Optional.ofNullable(predicate.getAuthor()).isPresent()) {
-            String[] arr = predicate.getAuthor().split("");
-
-            booleanBuilder.and(QAuthor.author.firstName.containsIgnoreCase(arr[0]));
-            booleanBuilder.and(QAuthor.author.firstName.containsIgnoreCase(arr[1]));
+            booleanBuilder.and(QBook.book.author.name.containsIgnoreCase(predicate.getAuthor()));
         }
 
         if (Optional.ofNullable(predicate.getLocation()).isPresent()) {
